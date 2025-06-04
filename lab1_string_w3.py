@@ -185,11 +185,11 @@ sed do eiusmod tempor incididunt
 ut labore et dolore magna aliqua."""
 print(a)'''
 #33
-'''a =\'''Lorem ipsum dolor sit amet,
+a =\'Lorem ipsum dolor sit amet,
 consectetur adipiscing elit,
 sed do eiusmod tempor incididunt
-ut labore et dolore magna aliqua.\'''
-print(a)'''
+ut labore et dolore magna aliqua.\'
+print(a)
 #34
 '''a = "Hello, World!"
 print(a[1])'''
