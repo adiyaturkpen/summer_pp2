@@ -27,11 +27,11 @@ while not done:
     screen.blit(mickey,(0,0))
 
     rotated_rightarm=pygame.transform.rotate(pygame.transform.scale(rightarm,(800,600)),-minute_angle)
-    rightarmrect=rotated_rightarm.get_rect(center=(800//2,600//2+12))
+    rightarmrect=rotated_rightarm.get_rect(center=(800//2,600//2))
     screen.blit(rotated_rightarm,rightarmrect)
 
     rotated_leftarm=pygame.transform.rotate(pygame.transform.scale(leftarm,(40.95,682.5)),-second_angle)
-    leftarmrect=rotated_leftarm.get_rect(center=(800//2,600//2+10))
+    leftarmrect=rotated_leftarm.get_rect(center=(800//2,600//2))
     screen.blit(rotated_leftarm,leftarmrect)
 
     pygame.display.flip()
