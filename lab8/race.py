@@ -33,7 +33,7 @@ game_over = font.render("Game Over", True, BLACK)
 background = pygame.image.load("lab8\\AnimatedStreet.png")
 
 # Создание игрового окна
-DISPLAYSURF = pygame.display.set_mode((400,600))
+DISPLAYSURF = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
 DISPLAYSURF.fill(WHITE)
 pygame.display.set_caption("Game")
 
