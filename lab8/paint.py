@@ -18,7 +18,7 @@ mode = 'tail'  # Текущий режим рисования
 points = []  # Список точек для режима "хвост"
 draw = False  # Флаг, указывающий, рисуем ли мы
 prev_pos = (0, 0)  # Предыдущая позиция мыши
-font = pygame.font.SysFont(None, 60)  # Шрифт для отображения радиуса кисти
+font = pygame.font.SysFont(None, 60)  # Шрифт для отображения цвета
 
 # Функция для рисования однотонной линии между точками
 def drawLineBetween(screen, start, end, width, color_name):
@@ -116,8 +116,7 @@ while True:
         for i in range(len(points) - 1):
             drawLineBetween(screen, points[i], points[i + 1], radius, color)
 
-    # Отображаем текущую толщину кисти в левом верхнем углу
-    pygame.draw.rect(screen, pygame.Color('white'), (5, 5, 115, 75))
+    # Отображаем текущий цвет кисти в левом верхнем углу
     render_radius = font.render(str("color"), True, pygame.Color(color))
     screen.blit(render_radius, (5, 5))
 
