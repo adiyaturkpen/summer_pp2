@@ -118,7 +118,7 @@ while True:
 
     # Отображаем текущую толщину кисти в левом верхнем углу
     pygame.draw.rect(screen, pygame.Color('white'), (5, 5, 115, 75))
-    render_radius = font.render(str(radius), True, pygame.Color(color))
+    render_radius = font.render(str("color"), True, pygame.Color(color))
     screen.blit(render_radius, (5, 5))
 
     # Обновляем экран
