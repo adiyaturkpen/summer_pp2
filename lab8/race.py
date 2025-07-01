@@ -32,7 +32,7 @@ game_over = font.render("Game Over", True, BLACK)
 # Фон
 background = pygame.image.load("lab8\\AnimatedStreet.png")
 pygame.mixer.music.load("lab8\\background.wav") 
-pygame.mixer.music.play(-1)
+pygame.mixer.music.play(loops=-1)
 
 # Создание игрового окна
 DISPLAYSURF = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
