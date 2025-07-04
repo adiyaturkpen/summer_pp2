@@ -17,7 +17,7 @@ def insert_from_console(conn):
     phone = input("Телефон: ")
 
     with conn.cursor() as cur:
-        cur.execute("INSERT INTO phonebook (name, surname, phone) VALUES (%s, %s, %s)",
+        cur.execute("INSERT INTO phonebook2 (name, surname, phone) VALUES (%s, %s, %s)",
                     (name, surname, phone))
         conn.commit()
         print("✔ Добавлено!")
@@ -41,7 +41,7 @@ def update_entry(conn):
     new_value = input("На что заменить: ")
 
     with conn.cursor() as cur:
-        query = f"UPDATE phonebook SET {column} = %s WHERE {column} = %s"
+        query = f"UPDATE phonebook2 SET {column} = %s WHERE {column} = %s"
         cur.execute(query, (new_value, old_value))
         conn.commit()
         print("✔ Обновлено!")
@@ -51,7 +51,7 @@ def query(conn):
     value = input("Введите значение: ")
 
     with conn.cursor() as cur:
-        query = f"SELECT * FROM phonebook WHERE {column} = %s"
+        query = f"SELECT * FROM phonebook2 WHERE {column} = %s"
         cur.execute(query, (value,))
         rows = cur.fetchall()
         print(tabulate(rows, headers=["ID", "Name", "Surname", "Phone"], tablefmt='fancy_grid'))
@@ -60,7 +60,7 @@ def delete_entry(conn):
     phone = input("Введите номер телефона для удаления: ")
 
     with conn.cursor() as cur:
-        cur.execute("DELETE FROM phonebook WHERE phone = %s", (phone,))
+        cur.execute("DELETE FROM phonebook2 WHERE phone = %s", (phone,))
         conn.commit()
         print("✔ Удалено!")
 
